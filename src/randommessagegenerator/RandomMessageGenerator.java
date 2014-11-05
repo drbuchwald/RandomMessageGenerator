@@ -58,8 +58,8 @@ public class RandomMessageGenerator {
     }
 
     public final String getRandomMessage() {
-        Random random = new Random(System.nanoTime());
-        int randomNumber = random.nextInt(messageList.size()); // seed value, ensures difference sequence every time it runs.
+        Random random = new Random(System.nanoTime()); // seed value, ensures difference sequence every time it runs.
+        int randomNumber = random.nextInt(messageList.size());
         String randomMessage = messageList.get(randomNumber);
         return randomMessage;
     }
